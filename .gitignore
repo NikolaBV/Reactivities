@@ -485,3 +485,7 @@ $RECYCLE.BIN/
 
 # Appsettings
 Appsettings.json
+
+node_modules
+.env
+.env.local
