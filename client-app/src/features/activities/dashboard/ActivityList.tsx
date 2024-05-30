@@ -3,9 +3,10 @@ import { Activity } from "../../../app/models/activity";
 
 interface Props {
   activities: Activity[];
+  selectActivity: (id: string) => void;
 }
 
-export default function ActivityList({ activities }: Props) {
+export default function ActivityList({ activities, selectActivity }: Props) {
   return (
     <>
       <Segment>
@@ -26,9 +27,7 @@ export default function ActivityList({ activities }: Props) {
                     floated="right"
                     content="View"
                     color="blue"
-                    onClick={() => {
-                      console.log("DAAAA");
-                    }}
+                    onClick={() => selectActivity(activity.id)}
                   ></Button>
                   <Label basic content={activity.category}></Label>
                 </Item.Extra>
